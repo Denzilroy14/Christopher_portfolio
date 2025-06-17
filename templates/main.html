@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Mainpage</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+    </head>
+    <body>
+        <div class="About">
+            {%for image in profile_image%}
+        <img src="{{url_for('static',filename='profileimage/'+image)}}">
+        {%endfor%}
+        <hr>
+            <h1>About Me:</h1>
+            <p>Hello There!Iam Christopher Davis a freelance photographer and video maker.
+                I am good at Mobile Photography including shooting reels and shorts 
+                and editing them and making them more awesome and cool using Adobe Photoshop.
+            </p>
+        </div>
+        <div class="skills">
+                <h2>My Skills Include:</h2>
+                <article>
+                <li>Mobile Photography</li>
+                <li>Product Photography</li>
+                <li>Editing reels and shorts</li>
+                <li>Adobe Photoshop</li>
+                <li>Editing with KineMaster</li>
+
+                <p>
+                    "The difference between ordinary and 
+                extraordinary is that little ‘extra’. – Jimmy Johnso"
+                </p>
+            </article>
+        </div>
+        <div class="works">
+            <h2>Take a look at some of my works</h2>
+            <div class="images">
+                {%for data in images%}
+                <li><img src="{{url_for('static',filename='images/'+data)}}"></li>
+                {%endfor%}
+            </div>
+        </div>
+        <hr>
+        <div class="contact">
+        <footer>
+            <h2>Contact me through:</h2>
+            <li>Email-id:<a target="_blank" href="mailto:drdavsiroy234@gmail.com">drdavisroy234@gmail.com</a></li>
+            <li>Phone:</li>
+        </footer>
+
+
+         <div class="external">
+            <div class="external_1">
+            <nav>
+                <!--<a target="_blank" onclick="window.location.href='https:DenzilRoymyportfolio.pythonanywhere.com'">Creator profile</a>-->
+            </nav>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
