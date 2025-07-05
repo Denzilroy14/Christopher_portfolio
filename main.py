@@ -5,8 +5,9 @@ This is Christopher Davis Portfolio Project
 from flask import*
 import os
 app=Flask(__name__)
-PROFILE_IMAGE=os.path.join('static','profileimage')
-IMAGES=os.path.join('static','images')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROFILE_IMAGE=os.path.join(BASE_DIR,'static','profileimage')
+IMAGES=os.path.join(BASE_DIR,'static','images')
 app.config['IMAGE_FOLDER']=PROFILE_IMAGE
 app.config['IMAGE']=IMAGES
 @app.route('/')
